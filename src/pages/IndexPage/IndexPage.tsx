@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { Link } from "@/UI/Link/Link";
 import tonSvg from "@/assets/icons/ton.svg";
 import i18nPng from "@/assets/icons/i18next.png";
+import ElsePeopleSvg from "@/assets/icons/ElsePeople.svg";
 
 export const IndexPage: FC = () => {
   return (
@@ -17,6 +18,14 @@ export const IndexPage: FC = () => {
             subtitle="Подключите свой TON-кошелек"
           >
             TON Connect
+          </Cell>
+        </Link>
+        <Link to="/onbording">
+          <Cell
+            before={<Image src={ElsePeopleSvg} style={{ backgroundColor: "#007AFF" }} />}
+            subtitle="Else People telegram app"
+          >
+            Else People
           </Cell>
         </Link>
         <Link to="/language">

@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         black: '#121212',
+        gray: '#C4C4C4',
         basicBlue: '#007AFF',
       },
       fontSize: {

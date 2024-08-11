@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 500;
+  src: url("../assets/fonts/sf-pro-text/sf-pro-text-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  src: url("../assets/fonts/sf-pro-text/sf-pro-text-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 400;
+  src: url("../assets/fonts/sf-pro/SF-Pro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 500;
+  src: url("../assets/fonts/sf-pro/SF-Pro-Display-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 600;
+  src: url("../assets/fonts/sf-pro/SF-Pro-Display-Semibold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 700;
+  src: url("../assets/fonts/sf-pro/SF-Pro-Display-Bold.otf") format("truetype");
+}
+
 body {
   background: var(--tg-theme-secondary-bg-color, white);
   padding: 0;

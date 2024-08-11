@@ -11,7 +11,7 @@ export const WelcomePage: FC = () => {
 
 	return (
 		<div className='bg-white h-full min-h-screen pb-5'>
-			<div className='px-4 pt-[73px] flex flex-col bg-light-blue justify-between min-h-screen'>
+			<div className='px-4 pt-[73px] flex flex-col gap-40 bg-light-blue justify-between min-h-screen'>
 				<div className='justify-start text-black font-sf-pro text-center'>
 					<h1 className='text-title-1 font-medium mb-4'>Else People</h1>
 					<LogoIcon className='w-[146px] h-[146px] mx-auto mb-8' />

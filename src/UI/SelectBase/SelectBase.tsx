@@ -9,7 +9,7 @@ export const SelectBase: FC<SelectBaseProps> = ({
 	mainClassName,
 	options,
 	onChange,
-	...props
+	defaultValue,
 }) => {
 	const [, setValue] = useState<string | number | null>(null)
 	const [isOpen, setIsOpen] = useState(false)
@@ -56,7 +56,7 @@ export const SelectBase: FC<SelectBaseProps> = ({
 						<ArrowIcon />
 					</div>
 				)}
-				{...props}
+				defaultValue={defaultValue}
 			>
 				{options.map(option => (
 					<MenuItem

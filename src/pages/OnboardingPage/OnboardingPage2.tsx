@@ -1,5 +1,6 @@
 import { ReactNode, useMemo, FC } from 'react'
 import { useInitData, User } from '@telegram-apps/sdk-react'
+import DotNavigation from '@/UI/DotNavigation/DotNavigation'
 
 export type DisplayDataRow = { title: string } & (
 	| { type: 'link'; value?: string }

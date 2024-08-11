@@ -1,4 +1,4 @@
-import { FormControl, MenuItem, Select, SelectChangeEvent } from '@mui/material'
+import { MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import { useState, type FC } from 'react'
 import { SelectBaseProps } from './types'
 import { ArrowIcon } from '@/assets/icons'
@@ -11,7 +11,7 @@ export const SelectBase: FC<SelectBaseProps> = ({
 	onChange,
 	...props
 }) => {
-	const [value, setValue] = useState<string | number | null>(null)
+	const [, setValue] = useState<string | number | null>(null)
 	const [isOpen, setIsOpen] = useState(false)
 	return (
 		<div

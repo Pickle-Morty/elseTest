@@ -1,23 +1,34 @@
-import type { FC } from "react";
-
-type ButtonBaseProps = {
-  text: string;
-  className?: string;
-  onClick?: () => void;
-};
+import type { FC } from 'react'
+import { ButtonBaseProps } from './types'
+import clsx from 'clsx'
+import { ArrowIcon } from '@/assets/icons'
+import { Link } from '../Link/Link'
 
 export const ButtonBase: FC<ButtonBaseProps> = ({
-  text,
-  className,
-  onClick,
-}) => (
-  <button
-    onClick={onClick}
-    className={`${className} group flex items-center justify-center gap-[5px] rounded-t-3xl rounded-b-3xl border border-basicBlue bg-basicBlue px-5 py-3 transition-colors  `}
-  >
-    <span className="text-base-m text-white transition-colors ">
-      {text}
-    </span>
-    <span className=" text-white leading-4 text-[20px]">&#x203A;</span>
-  </button>
-);
+	children,
+	className,
+	onClick,
+	icon,
+	isLink,
+}) => {
+	const commonClasses = clsx(
+		className,
+		'bg-blue w-full font-sf-pro-text font-medium rounded-3xl py-3 flex text-white justify-center items-end gap-1.5 text-[1rem] leading-[1rem] font-medium'
+	)
+	const Arrow = (
+		<div className='w-3.5 h-3.5 flex items-center justify-center'>
+			<ArrowIcon />
+		</div>
+	)
+	return isLink ? (
+		<Link {...isLink} className={commonClasses}>
+			{children}
+			{icon === 'arrow' && Arrow}
+		</Link>
+	) : (
+		<button onClick={onClick} className={commonClasses}>
+			{children}
+			{icon === 'arrow' && Arrow}
+		</button>
+	)
+}

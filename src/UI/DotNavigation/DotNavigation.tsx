@@ -1,21 +1,25 @@
-import React from "react";
-import styles from "./DotNavigation.module.scss";
+import type { FC } from 'react'
+import { DotNavigationProps } from './types'
+import clsx from 'clsx'
 
-interface DotNavigationProps {
-  value: number;
-}
+const DotNavigation: FC<DotNavigationProps> = ({
+	dots,
+	currentDot,
+	className,
+}) => (
+	<div className={clsx('flex gap-2 justify-center', className)}>
+		{dots.map(dot => (
+			<div
+				key={dot}
+				className={clsx(
+					'h-1.5 rounded-full',
+					currentDot === dot
+						? 'bg-black w-1.5 animate-grow'
+						: 'bg-grey-dot w-1.5'
+				)}
+			/>
+		))}
+	</div>
+)
 
-const DotNavigation: React.FC<DotNavigationProps> = ({ value }) => {
-  return (
-    <div className={styles.box}>
-      {[1, 2, 3, 4].map((_, i) => (
-        <div
-          key={i}
-          className={`${styles.dot} ${value === i ? styles.active : ''}`}
-        />
-      ))}
-    </div>
-  );
-};
-
-export default DotNavigation;
+export default DotNavigation

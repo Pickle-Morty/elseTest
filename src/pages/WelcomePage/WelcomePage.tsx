@@ -26,6 +26,7 @@ export const WelcomePage: FC = () => {
 							{ id: 'ru', name: 'Русский' },
 							{ id: 'en', name: 'English' },
 						]}
+						defaultValue='ru'
 						mainClassName='mb-7 mx-auto w-[250px]'
 						onChange={value => changeLanguage(value as string)}
 					/>

@@ -1,5 +1,6 @@
 import { ReactNode, useMemo, FC } from 'react'
 import { useInitData, User } from '@telegram-apps/sdk-react'
+import DotNavigation from '@/UI/DotNavigation/DotNavigation'
 
 export type DisplayDataRow = { title: string } & (
 	| { type: 'link'; value?: string }
@@ -90,6 +91,7 @@ export const OnboardingPage2: FC = () => {
 						</label>
 					</form>
 				</div>
+				<DotNavigation className='mb-4.5' currentDot={2} dots={[1, 2, 3, 4]} />
 				<div className='justify-self-end'>
 					<div className='text-center text-black text-normal mt-5 mb-[28px]'>
 						<div className='font-bold mb-[5px]'>Проверка данных</div>

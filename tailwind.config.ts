@@ -12,6 +12,7 @@ export default {
         blue: '#007AFF',
         'grey-dot': '#D9D9D9',
         white: "#FFFFFF",
+        'light-blue': "#F4F9FE",
       },
       fontFamily: {
         'sf-pro-text': ['SF Pro Text', 'sans-serif'],

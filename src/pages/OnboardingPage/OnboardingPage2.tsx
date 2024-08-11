@@ -1,6 +1,4 @@
-import { ReactNode, useState, useMemo, FC } from 'react'
-import { ButtonBase } from '@/UI/ButtonBase/ButtonBase'
-import DotNavigation from '@/UI/DotNavigation/DotNavigation'
+import { ReactNode, useMemo, FC } from 'react'
 import { useInitData, User } from '@telegram-apps/sdk-react'
 
 export type DisplayDataRow = { title: string } & (
@@ -24,14 +22,11 @@ function getUserRows(user: User): DisplayDataRow[] {
 }
 
 export const OnboardingPage2: FC = () => {
-	const [page, setPage] = useState(1)
 	const initData = useInitData()
 
 	const userRows = useMemo<DisplayDataRow[] | undefined>(() => {
 		return initData && initData.user ? getUserRows(initData.user) : undefined
 	}, [initData])
-
-	const userPhotoUrl = userRows?.[2]?.value as string | undefined
 
 	return (
 		<div className='bg-white h-full min-h-screen pb-5'>

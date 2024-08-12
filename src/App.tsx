@@ -21,7 +21,11 @@ export const App: FC = () => {
   const themeParams = useThemeParams();
   const viewport = useViewport();
 
-  useEffect(() => viewport?.expand(), [] )
+  useEffect(() =>{
+    if(viewport) {
+      viewport.expand()
+    }
+  } , [] )
 
   useEffect(() => bindMiniAppCSSVars(miniApp, themeParams), [miniApp, themeParams]);
 

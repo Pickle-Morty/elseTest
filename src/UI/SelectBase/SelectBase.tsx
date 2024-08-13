@@ -27,7 +27,7 @@ export const SelectBase: FC<SelectBaseProps> = ({
 			)}
 			<Select
 				classes={{
-					root: '!rounded-xl bg-white',
+					root: '!rounded-xl	 bg-white',
 				}}
 				className='[&_fieldset]:!border-none'
 				onChange={(event: SelectChangeEvent<string | number>) => {
@@ -58,12 +58,13 @@ export const SelectBase: FC<SelectBaseProps> = ({
 				)}
 				defaultValue={defaultValue}
 			>
-				{options.map(option => (
+				{options.map((option, i )=> (
 					<MenuItem
-						className='!min-h-10 !px-2.5 !py-0 !font-sf-pro !text-[1.0625rem] !text-black !leading-[1.16875rem]'
+						key={i}
+						className='!min-h-10 !px-2.5 !py-0 !font-sf-pro !text-[1.0625rem] !text-black !leading-[1.16875rem] flex align-center'
 						value={option.id}
 					>
-						{option.name}
+						 <option.icon className = '!mr-1.5' /> {option.name}
 					</MenuItem>
 				))}
 			</Select>

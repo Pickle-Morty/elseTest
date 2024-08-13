@@ -1,0 +1,35 @@
+.custom_input {
+  background: white!important;
+  border: 1px solid #efeded!important;
+  border-radius: 12px;
+  padding: 29px 13px 13px!important;
+}
+
+.custom_input > .MuiInputBase-root {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.custom_input > label {
+  margin: 0!important;
+  padding: 0!important;
+  color: #CCCDD2;
+  top: 13px!important;
+  left: 13px!important;
+  font-size: 16px!important;
+  /* font-weight: 500!important; */
+  font-family: "SF Pro"!important;
+}
+
+.custom_input > label.Mui-focused {
+  margin: 0!important;
+  padding: 0!important;
+  color: #CCCDD2;
+  top: 13px!important;
+  left: 13px!important;
+}
+
+.custom_input > .MuiInputBase-root > .MuiInputBase-input  {
+  margin: 0!important;
+  padding: 0!important;
+}

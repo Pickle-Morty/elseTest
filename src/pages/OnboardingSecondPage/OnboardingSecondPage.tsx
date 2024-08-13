@@ -37,9 +37,7 @@ export const OnboardingSecondPage: FC = () => {
   const userRows = useMemo<DisplayDataRow[] | undefined>(() => {
       return initData && initData.user ? getUserRows(initData.user) : undefined
   }, [initData])
-  const [input, setInput] = useState(`${userRows?.[3]?.value || ''} ${
-    userRows?.[4]?.value || ''
-}`);
+  const [input, setInput] = useState(`${userRows?.[4]?.value || ''} ${userRows?.[3]?.value || ''}`);
   return (
     <div className="bg-white-bg h-full min-h-screen pb-5">
       <div className="px-4 pt-[91px] flex flex-col gap-[100px] bg-light-blue justify-between min-h-screen">

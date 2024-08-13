@@ -1,6 +1,9 @@
 import { ReactNode, useMemo, FC } from 'react'
 import { useInitData, User } from '@telegram-apps/sdk-react'
 import DotNavigation from '@/UI/DotNavigation/DotNavigation'
+import { TextField } from '@mui/material';
+import { SelectBase } from '@/UI/SelectBase/SelectBase';
+
 
 export type DisplayDataRow = { title: string } & (
 	| { type: 'link'; value?: string }
@@ -38,6 +41,7 @@ export const OnboardingPage2: FC = () => {
             src={userPhotoUrl || userImg}
             alt="user"
           /> */}
+		  			
 					<h1 className='text-black font-bold text-3xl'>Личные данные</h1>
 					<div className='text-gray text-normal mb-[15px]'>
 						из вашего профиля в телеграм
@@ -60,20 +64,8 @@ export const OnboardingPage2: FC = () => {
 								className='mt-1 w-full text-base border-none p-0 focus:border-transparent focus:outline-none focus:ring-0'
 							/>
 						</label>
-						<label
-							htmlFor='UserBirthday'
-							className='block text-black overflow-hidden rounded-md shadow px-3 py-2 focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600'
-						>
-							<span className='text-xs text-gray font-medium text-gray-700'>
-								Дата рождения
-							</span>
-							<input
-								type='text'
-								id='UserBirthday'
-								placeholder='Дата рождения'
-								className='mt-1 w-full text-base border-none p-0 focus:border-transparent focus:outline-none focus:ring-0'
-							/>
-						</label>
+						<TextField label="asd" variant='filled' />
+						<SelectBase options={[]}/>
 						<label
 							htmlFor='UserCity'
 							className='block text-black overflow-hidden rounded-md shadow px-3 py-2 focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600'
@@ -91,20 +83,16 @@ export const OnboardingPage2: FC = () => {
 						</label>
 					</form>
 				</div>
-				<DotNavigation className='mb-4.5' currentDot={2} dots={[1, 2, 3, 4]} />
 				<div className='justify-self-end'>
 					<div className='text-center text-black text-normal mt-5 mb-[28px]'>
 						<div className='font-bold mb-[5px]'>Проверка данных</div>
 						<p>Проверьте личные данные из телеграма или внесите изменения</p>
 					</div>
 					<div className='flex justify-center mb-[18px]'>
-						{/* <DotNavigation value={page} /> */}
+					<DotNavigation className='mb-4.5' currentDot={2} dots={[1, 2, 3, 4]} />
+					
 					</div>
-					{/* <ButtonBase
-            text="Далее"
-            onClick={() => setPage(page + 1)}
-            className="w-full mb-9"
-          /> */}
+
 				</div>
 			</div>
 		</div>

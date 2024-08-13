@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { ButtonBase } from '@/UI/ButtonBase/ButtonBase'
 import DotNavigation from '@/UI/DotNavigation/DotNavigation'
-import { LogoIcon } from '@/assets/icons'
+import { EnFlag, LogoIcon, RuFlag } from '@/assets/icons'
 import { SelectBase } from '@/UI/SelectBase/SelectBase'
 import { useTranslation } from 'react-i18next'
 import { changeLanguage } from '@/utils/changeLanguage'
@@ -10,7 +10,7 @@ export const WelcomePage: FC = () => {
 	const { t } = useTranslation()
 
 	return (
-		<div className='bg-white h-full min-h-screen pb-5'>
+		<div className='bg-white-bg h-full min-h-screen pb-5'>
 			<div className='px-4 pt-[73px] flex flex-col gap-40 bg-light-blue justify-between min-h-screen'>
 				<div className='justify-start text-black font-sf-pro text-center'>
 					<h1 className='text-title-1 font-medium mb-4'>Else People</h1>
@@ -23,8 +23,8 @@ export const WelcomePage: FC = () => {
 					<SelectBase
 						label={t('language')}
 						options={[
-							{ id: 'ru', name: 'Русский' },
-							{ id: 'en', name: 'English' },
+							{ id: 'ru', name: 'Русский', icon: RuFlag },
+							{ id: 'en', name: 'English', icon: EnFlag },
 						]}
 						defaultValue='ru'
 						mainClassName='mb-7 mx-auto w-[250px]'
@@ -37,7 +37,7 @@ export const WelcomePage: FC = () => {
 					/>
 					<ButtonBase
 						icon='arrow'
-						isLink={{ to: '/onbording2' }}
+						isLink={{ to: '/onboardingSecond' }}
 						className='mb-9'
 					>
 						Далее

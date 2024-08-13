@@ -10,9 +10,11 @@ export default {
         black: '#121212',
         gray: '#C4C4C4',
         blue: '#007AFF',
+        'gray-frame': '#EFEDED',
         'grey-dot': '#D9D9D9',
         white: "#FFFFFF",
         'light-blue': "#F4F9FE",
+        'white-bg': '#F4F9FE',
       },
       fontFamily: {
         'sf-pro-text': ['SF Pro Text', 'sans-serif'],
@@ -35,6 +37,10 @@ export default {
       },
       fontSize: {
         'title-1': ['2.5rem', { lineHeight: '3.75rem' }], // 40px
+        'title-2': ['1.75rem', { lineHeight: '1.875rem' }], // 28px
+        'subtitle': ['1.125rem', { lineHeight: '1.125rem' }], // 18px
+        'custom-base': ['1rem', { lineHeight: '1.125rem' }], // 18px
+        'custom-text-xs': ['0.813rem', { lineHeight: '0.894rem' }], // 13px
       },
       width: {
         4.5: "18px",

@@ -5,6 +5,7 @@ import { TONConnectPage } from '@/pages/TONConnectPage/TONConnectPage'
 import { LanguagePage } from '@/pages/LanguagePage/LanguagePage'
 import { WelcomePage } from '@/pages/WelcomePage/WelcomePage'
 import { OnboardingSecondPage } from '@/pages/OnboardingSecondPage/OnboardingSecondPage'
+import { OnboardingThirdPage } from '@/pages/OnboardingThirdPage/OnboardingThirdPage'
 
 interface Route {
 	path: string
@@ -18,6 +19,7 @@ export const routes: Route[] = [
 	{ path: '/language', Component: LanguagePage },
 	{ path: '/onbording', Component: WelcomePage },
 	{ path: '/onboardingSecond', Component: OnboardingSecondPage },
+	{ path: '/onboardingThird', Component: OnboardingThirdPage },
 	{
 		path: '/ton-connect',
 		Component: TONConnectPage,

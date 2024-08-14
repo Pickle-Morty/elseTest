@@ -16,9 +16,10 @@
   color: #CCCDD2;
   top: 13px!important;
   left: 13px!important;
-  font-size: 16px!important;
+  font-size: 12px!important;
   /* font-weight: 500!important; */
   font-family: "SF Pro"!important;
+  transform: none!important;
 }
 
 .custom_input > label.Mui-focused {

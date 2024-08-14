@@ -84,7 +84,7 @@ export const OnboardingSecondPage: FC = () => {
             isLink={{ to: "/onboardingThird" }}
             className="mb-9"
           >
-            Далее
+            Сохранить
           </ButtonBase>
         </div>
       </div>

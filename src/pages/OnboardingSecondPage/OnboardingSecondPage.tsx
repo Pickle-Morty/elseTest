@@ -1,7 +1,7 @@
 import { ReactNode, useMemo, useState, type FC } from "react";
 import { ButtonBase } from "@/UI/ButtonBase/ButtonBase";
 import DotNavigation from "@/UI/DotNavigation/DotNavigation";
-// import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";  
 import UserImg from "@/assets/image/user.jpg";
 import { InputBase } from "@/UI/InputBase/InputBase";
 import { InputLink } from "@/UI/InputLink/InputLink";
@@ -40,7 +40,7 @@ export const OnboardingSecondPage: FC = () => {
   const [input, setInput] = useState(`${userRows?.[4]?.value || ''} ${userRows?.[3]?.value || ''}`);
   return (
     <div className="bg-white-bg h-full min-h-screen pb-5">
-      <div className="px-4 pt-[91px] flex flex-col gap-[100px] bg-light-blue justify-between min-h-screen">
+      <div className="px-4 pt-[21px] flex flex-col gap-[80px] bg-light-blue justify-between min-h-screen">
         <div className="justify-start text-black font-sf-pro">
           <img
             className="w-[87px] h-[87px] rounded-full mb-2.5"

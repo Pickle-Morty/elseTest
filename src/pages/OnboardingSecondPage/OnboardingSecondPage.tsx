@@ -55,6 +55,7 @@ export const OnboardingSecondPage: FC = () => {
           </div>
           <form action="" className="mt-3 flex flex-col gap-[6px] ">
             <InputBase
+              placeholder="Имя и фамилия"
               value={input}
               label="Имя и фамилия"
               className="mb-[16px]"
@@ -69,7 +70,7 @@ export const OnboardingSecondPage: FC = () => {
         <div className="justify-self-end">
           <div className="text-center text-black font-sf-pro">
             <div className="font-semibold text-subtitle mb-[4px]">Проверка данных</div>
-            <div className="font-custom-base  mb-[25px]">
+            <div className="font-custom-base tracking-custom-base mb-[25px]">
               Проверьте личные данные <br /> из телеграма или внесите изменения
             </div>
           </div>
@@ -80,7 +81,7 @@ export const OnboardingSecondPage: FC = () => {
           />
           <ButtonBase
             icon="arrow"
-            isLink={{ to: "/onbording2" }}
+            isLink={{ to: "/onboardingThird" }}
             className="mb-9"
           >
             Далее

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      letterSpacing: {
+        'custom-base': '-0.4px'
+      },
       colors: {
         black: '#121212',
         gray: '#C4C4C4',
@@ -39,7 +42,7 @@ export default {
         'title-1': ['2.5rem', { lineHeight: '3.75rem' }], // 40px
         'title-2': ['1.75rem', { lineHeight: '1.875rem' }], // 28px
         'subtitle': ['1.125rem', { lineHeight: '1.125rem' }], // 18px
-        'custom-base': ['1rem', { lineHeight: '1.125rem' }], // 18px
+        'custom-base': ['1rem', { lineHeight: '1.063rem' }], // 18px
         'custom-text-xs': ['0.813rem', { lineHeight: '0.894rem' }], // 13px
       },
       width: {
